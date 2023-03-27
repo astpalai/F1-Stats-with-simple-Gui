@@ -16,7 +16,7 @@ app = Dash(__name__)
 app._favicon = ("F1.ico")
 
 app.layout = html.Div([
-    html.H1("Welcome to F1 Stats!",style={"width":"100%", "textAlign":"center"}),
+    html.H1("Welcome to F1 Stats!",style={"textAlign":"center"}),
 
     html.Div([
         # Sidebar
@@ -30,16 +30,16 @@ app.layout = html.Div([
 
             html.Br(),
             html.Br(),
-            html.Button("Check", id="button", n_clicks=0, style={"width":"25%", "align":"center"}),
-        ], style={"width":"25%","padding": 20}),
+            html.Button("Check", id="button", n_clicks=0, style={"width":"30%", "margin":"auto", "display":"block"}),
+        ], style={"padding": 20, "width":"250px"}),
 
-        html.Div(style={"width":"5%"}),
+        html.Div(style={"width":"50px"}),
 
         # Main Window (Placeholder)
-        html.Div(id="displayResults", style={"display": "flex", "flex-direction": "row"})
-    ], style={"width":"100%", "display": "flex", "flex-direction": "row"})
+        html.Div(id="displayResults", style={"width":"100%", "display": "flex", "flex-direction": "row"})
+    ], style={"display": "flex", "flex-direction": "row"})
 
-], style={"display": "flex", "flex-direction": "column"})
+], style={"display": "flex", "flex-direction": "column"},)
 
 # Callback for pressing the button
 @app.callback(
